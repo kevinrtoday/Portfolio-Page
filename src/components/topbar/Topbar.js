@@ -8,7 +8,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
         <div className="left">
           <a href="#intro" className="logo">
             {" "}
-            Kevin Rodriguez{" "}
+            #kevinrtoday{" "}
           </a>
           <div className="itemContainer">
             <PhoneInTalk className="icon" />
