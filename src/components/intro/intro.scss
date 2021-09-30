@@ -1,0 +1,29 @@
+.intro {
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 700px;
+      height: 700px;
+      background-color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: right;
+
+      img {
+        width: 100%;
+        min-height: 100%;
+        flex-shrink: 0;
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+  }
+}
