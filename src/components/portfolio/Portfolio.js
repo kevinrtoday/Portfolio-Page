@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
+import {
+  featuredPortfolio,
+  webPortfolio,
+  realestatePortfolio,
+  financePortfolio,
+  travelPortfolio,
+} from "../../data";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
+  const [data, setData] = useState([]);
   const list = [
     {
       id: "featured",
@@ -14,7 +22,7 @@ export default function Portfolio() {
       title: "Web App",
     },
     {
-      id: "real estate",
+      id: "realestate",
       title: "Real Estate",
     },
     {
@@ -26,6 +34,29 @@ export default function Portfolio() {
       title: "Travel",
     },
   ];
+
+  useEffect(() => {
+    switch (selected) {
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "web":
+        setData(webPortfolio);
+        break;
+      case "realestate":
+        setData(realestatePortfolio);
+        break;
+      case "finance":
+        setData(financePortfolio);
+        break;
+      case "travel":
+        setData(travelPortfolio);
+        break;
+      default:
+        setData(featuredPortfolio);
+    }
+  }, [selected]);
+
   return (
     <div className="portfolio" id="portfolio">
       <h1> Portfolio</h1>
@@ -40,48 +71,12 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        <div className="item">
-          <img
-            src="https://www.linkpicture.com/q/Screen-Shot-2021-09-30-at-4.17.12-PM.png"
-            alt=""
-          />
-          <h3>Crypto App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://www.linkpicture.com/q/Screen-Shot-2021-09-30-at-4.17.12-PM.png"
-            alt=""
-          />
-          <h3>Crypto App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://www.linkpicture.com/q/Screen-Shot-2021-09-30-at-4.17.12-PM.png"
-            alt=""
-          />
-          <h3>Crypto App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://www.linkpicture.com/q/Screen-Shot-2021-09-30-at-4.17.12-PM.png"
-            alt=""
-          />
-          <h3>Crypto App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://www.linkpicture.com/q/Screen-Shot-2021-09-30-at-4.17.12-PM.png"
-            alt=""
-          />
-          <h3>Crypto App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://www.linkpicture.com/q/Screen-Shot-2021-09-30-at-4.17.12-PM.png"
-            alt=""
-          />
-          <h3>Crypto App</h3>
-        </div>
+        {data.map((d) => (
+          <div className="item">
+            <img src={d.img} alt="" />
+            <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );

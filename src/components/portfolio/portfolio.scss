@@ -15,7 +15,6 @@
     padding: 0;
     list-style: none;
     display: flex;
-
   }
   .container {
     width: 80%;
@@ -25,10 +24,10 @@
     flex-wrap: wrap;
 
     .item {
-      width: 220px;
-      height: 180px;
+      width: 300px;
+      height: 250px;
       border-radius: 20px;
-      border: 1.5px solid #a5fcf5;
+      border: 2px solid #a5fcf5;
       margin: 10px 20px;
       display: flex;
       align-items: center;
