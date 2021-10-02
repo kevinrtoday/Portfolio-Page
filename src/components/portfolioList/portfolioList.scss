@@ -7,9 +7,10 @@
   border-radius: 10px;
   cursor: pointer;
   height: 20px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+
+  @include mobile {
+    margin-right: 20px;
+  }
 
   &.active {
     background-color: $mainColor;
