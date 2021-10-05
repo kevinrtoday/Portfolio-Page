@@ -10,7 +10,10 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="left">
-        <img src="collection/shake.svg" alt="" />
+        <img
+          src="https://i.postimg.cc/Th8zXDpk/pexels-negative-space-92904.jpg"
+          alt=""
+        />
       </div>
       <div className="right">
         <h2>Contact me</h2>
