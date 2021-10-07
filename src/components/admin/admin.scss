@@ -7,13 +7,34 @@
   z-index: 5;
   box-sizing: border-box;
   font-family: montserrat, sans-serif;
-  height: 20vh;
-  left: 30%;
-  top: 30%;
+  height: 50vh;
+  width: 100vh;
+  left: 55%;
+  top: 1%;
   align-items: center;
-  background-color: $mainColor;
+  // background-color: $mainColor;
   color: black;
   border-radius: 10px;
   width: 40%;
   height: 30%;
+}
+
+.welcome {
+  position: absolute;
+  display: flex;
+  background-color: transparent;
+  margin-bottom: 30%;
+}
+
+.form {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  margin-right: 38%;
+  top: 40%;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  width: 350px;
+  outline-color: #a5fcf5;
 }
