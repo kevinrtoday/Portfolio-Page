@@ -31,7 +31,7 @@ function Admin() {
   };
 
   return (
-    <div className="Admin">
+    <div className="admin">
       {user.email != "" ? (
         <div className="welcome">
           <h2>
