@@ -8,7 +8,16 @@ function Admin() {
     password: "admin123",
   };
 
-  const [user, setUser] = useState({ name: "", email: "" });
+  function Vanish() {
+    var x = document.getElementById("LoginForm");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  const [user, setUser] = useState({ email: "" });
   const [error, setError] = useState("");
 
   const Login = (details) => {
@@ -19,26 +28,26 @@ function Admin() {
       details.password == adminUser.password
     ) {
       console.log("logged in");
-      setUser({ name: details.name, email: details.email });
+      setUser({ email: details.email });
     } else {
       console.log("Details do not match!");
+      setError("Details do not match!");
     }
   };
 
   const Logout = () => {
     console.log("Logout");
-    setUser({ name: details.name, email: details.email });
+    setUser({ email: "" });
+    Vanish();
   };
 
   return (
-    <div className="admin">
+    <div className="admin" id="LoginForm">
       {user.email != "" ? (
         <div className="welcome">
-          <h2>
-            {" "}
-            Welcome, <span>{user.name}</span>{" "}
-          </h2>
-          {/* <button onClick={Log}> Logout</button> */}
+          <h2> Welcome, Admin</h2>
+          <button onClick={Logout}> Logout</button>
+          <button onClick={Vanish}> Hide</button>
         </div>
       ) : (
         <LoginForm Login={Login} error={error} />

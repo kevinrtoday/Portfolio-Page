@@ -8,7 +8,6 @@ import Contact from "./components/contact/Contact";
 import "./app.scss";
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
-import LoginView from "./views/LoginView";
 import Admin from "./components/admin/Admin";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/login" component={LoginView} />
           <Route exact path="/admin" component={Admin} />
         </Switch>
       </BrowserRouter>
