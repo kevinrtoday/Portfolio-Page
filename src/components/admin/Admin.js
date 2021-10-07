@@ -47,7 +47,7 @@ function Admin() {
         <div className="welcome">
           <h2> Welcome, Admin</h2>
           <button onClick={Logout}> Logout</button>
-          <button onClick={Vanish}> Hide</button>
+          {/* <button onClick={Vanish}> Hide</button> */}
         </div>
       ) : (
         <LoginForm Login={Login} error={error} />

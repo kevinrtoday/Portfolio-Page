@@ -12,11 +12,10 @@
   left: 55%;
   top: 1%;
   align-items: center;
-  // background-color: $mainColor;
   color: black;
-  border-radius: 10px;
   width: 40%;
   height: 30%;
+  outline-color: #a5fcf5;
 }
 
 .welcome {
@@ -32,9 +31,8 @@
   display: flex;
   margin-right: 38%;
   top: 40%;
-  border-color: black;
+  border-color: $mainColor;
   border-style: solid;
   border-radius: 10px;
-  width: 350px;
-  outline-color: #a5fcf5;
+  width: 330px;
 }
